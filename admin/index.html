@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Content Manager</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>CMS Login</title>
 </head>
-
 <body>
-  <script src="https://unpkg.com/decap-cms@3.1.9/dist/decap-cms.js"></script>
+  <div id="app"></div>
+
+  <!-- Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@3/dist/decap-cms.js"></script>
+
+  <script>
+    Decap.init({
+      config: '/admin/config.yml'
+    });
+  </script>
 </body>
 </html>
