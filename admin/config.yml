@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: bilalrazab/zilehuma-website
+  name: git-gateway
   branch: main
 
 media_folder: "images"
@@ -8,13 +7,13 @@ public_folder: "/images"
 
 collections:
   - name: "blog"
-    label: "Blog"
+    label: "Blog Posts"
     folder: "content/blog"
     create: true
     slug: "{{slug}}"
 
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
