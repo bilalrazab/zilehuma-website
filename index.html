@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
       // ===========================
 // Theme Toggle
@@ -2490,6 +2491,19 @@ if (window.netlifyIdentity) {
     if (!user) {
       window.netlifyIdentity.on("login", () => {
         window.location.href = "/admin/";
+      });
+    }
+  });
+
+  window.netlifyIdentity.init();
+}
+</script>
+<script>
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", user => {
+    if (!user) {
+      window.netlifyIdentity.on("login", () => {
+        document.location.href = "/admin/";
       });
     }
   });
